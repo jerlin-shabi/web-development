@@ -5,13 +5,17 @@
     <body>
         <div class="main">
             <img class="logo-img" src="https://th.bing.com/th/id/OIP.B9WMnEuphC1JbR2TrU5IIAHaDN?w=325&h=151&c=7&r=0&o=5&pid=1.7">
-            <input class="search-input" type="text" />
+            <input class="search-input" type="text" id="search-input" />
             <div class="btn-wrapper">
-                <button class="btn">Google Search</button>
+                <button class="btn" id="search">Google Search</button>
                 <button class="btn">I'm Feeling Lucky</button>
             </div>
         </div>
     </body>
+    <script>
+        document.getElementById('search').onclick = function() {
+            var q = document.getElementById('search-input').value;
+            window.open('http://google.com/search?q='+q, '_blank');
+        };
+    </script>
 </html>
-
-
